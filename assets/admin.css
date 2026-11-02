@@ -1,0 +1,143 @@
+/*
+ * Drift: Sunset admin styles.
+ *
+ * Loaded on supported edit and list screens, and on Tools → Drift: Sunset.
+ * Accent: fuchsia #d946ef for the mark; #a21caf for text, focus and buttons (AA on white).
+ */
+
+/* Edit-screen box -------------------------------------------------------- */
+
+.drift-sunset-box__field label {
+	display: block;
+	margin-bottom: 4px;
+}
+
+.drift-sunset-box__field input {
+	width: 100%;
+}
+
+/* "Expired on …" in the box, "Expired …" in the list column and the
+   required-date error. Core's error red, 6.2:1 on white. */
+.drift-sunset-expired,
+.drift-sunset-box__error {
+	color: #b32d2e;
+}
+
+.drift-sunset-box__error {
+	font-weight: 600;
+}
+
+/* Tools → Drift: Sunset -------------------------------------------------- */
+
+.drift-sunset {
+	--drift-sunset-accent: #d946ef;
+	--drift-sunset-accent-strong: #a21caf;
+	--drift-sunset-border: #dcdcde;
+	max-width: 960px;
+}
+
+.drift-sunset__title {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.drift-sunset__mark {
+	display: inline-flex;
+	color: var(--drift-sunset-accent);
+}
+
+.drift-sunset__tabs {
+	margin-bottom: 16px;
+}
+
+.drift-sunset__lead {
+	margin: 16px 0 0;
+	font-size: 14px;
+}
+
+.drift-sunset__card {
+	margin-top: 16px;
+	padding: 4px 20px 16px;
+	background: #fff;
+	border: 1px solid var(--drift-sunset-border);
+	border-radius: 8px;
+}
+
+.drift-sunset__card-title {
+	margin: 16px 0 0;
+}
+
+.drift-sunset__intro {
+	margin: 12px 0 16px;
+	padding-left: 12px;
+	border-left: 3px solid var(--drift-sunset-accent);
+}
+
+.drift-sunset__help {
+	margin-top: 16px;
+	color: #50575e;
+}
+
+.drift-sunset .notice.inline {
+	margin: 16px 0 0;
+}
+
+.drift-sunset .form-table th {
+	width: 160px;
+}
+
+.drift-sunset .button-primary {
+	background: var(--drift-sunset-accent-strong);
+	border-color: var(--drift-sunset-accent-strong);
+}
+
+.drift-sunset .button-primary:hover,
+.drift-sunset .button-primary:focus {
+	background: #86198f;
+	border-color: #86198f;
+}
+
+.drift-sunset-table td {
+	vertical-align: top;
+}
+
+/* "Due on next cron run". Dark amber on pale amber, 6.4:1. */
+.drift-sunset-badge {
+	display: inline-block;
+	margin-top: 4px;
+	padding: 1px 8px;
+	border-radius: 999px;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.drift-sunset-badge--warning {
+	color: #8a4b00;
+	background: #fcf0d4;
+}
+
+/* Settings tab: child categories indented under their parents ------------ */
+
+.drift-sunset-cat {
+	display: block;
+	margin-bottom: 6px;
+}
+
+.drift-sunset-cat--depth-1 {
+	margin-left: 1.5em;
+}
+
+.drift-sunset-cat--depth-2 {
+	margin-left: 3em;
+}
+
+.drift-sunset-cat--depth-3 {
+	margin-left: 4.5em;
+}
+
+@media (max-width: 782px) {
+	.drift-sunset__card {
+		padding: 4px 12px 12px;
+	}
+}
